@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetsStore.Domain", "PetsStore.Domain\PetsStore.Domain.csproj", "{4864220D-E117-4E91-A3BF-D19BF92D638A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetsStore.WebUI", "PetsStore.WebUI\PetsStore.WebUI.csproj", "{1DEEE70E-FED8-40FF-B7B2-3C4D6C2F0BDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetsStore.WebUI", "PetsStore.WebUI\PetsStore.WebUI.csproj", "{8390367C-132B-4BC0-9C2B-5481ED274783}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{4864220D-E117-4E91-A3BF-D19BF92D638A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4864220D-E117-4E91-A3BF-D19BF92D638A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4864220D-E117-4E91-A3BF-D19BF92D638A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1DEEE70E-FED8-40FF-B7B2-3C4D6C2F0BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1DEEE70E-FED8-40FF-B7B2-3C4D6C2F0BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1DEEE70E-FED8-40FF-B7B2-3C4D6C2F0BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1DEEE70E-FED8-40FF-B7B2-3C4D6C2F0BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8390367C-132B-4BC0-9C2B-5481ED274783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8390367C-132B-4BC0-9C2B-5481ED274783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8390367C-132B-4BC0-9C2B-5481ED274783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8390367C-132B-4BC0-9C2B-5481ED274783}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

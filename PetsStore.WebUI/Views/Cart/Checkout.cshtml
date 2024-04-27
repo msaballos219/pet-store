@@ -1,7 +1,7 @@
 ﻿@model PetsStore.Domain.Entities.ShippingDetails
 
 @{
-    ViewBag.Title = "SportsStore: Checkout";
+    ViewBag.Title = "PetsStore: Checkout";
 }
 
 <h2> Checkout now</h2>
@@ -12,7 +12,9 @@
 
 @using (Html.BeginForm())
 {
-    <h3> Ship to </h3>
+    @Html.ValidationSummary()
+
+    <h3>Ship to </h3>
     <div class="form-group">
         <label> Name:</label>
         @Html.TextBoxFor(x => x.Name, new
@@ -21,68 +23,22 @@
         })
     </div>
 
-    <h3> Ship to </h3>
-    <div class="form-group">
-        <label>Line 1:</label>
-        @Html.TextBoxFor(x => x.Line1, new
-        {
-            @class = "form-control"
-        })
-    </div>
-
     <h3>Address</h3>
-    <div class="form-group">
-        <label> Line 2:</label>
-        @Html.TextBoxFor(x => x.Line2, new
+    foreach (var property in ViewData.ModelMetadata.Properties)
+    {
+        if (property.PropertyName != "Name" && property.PropertyName != "GiftWrap")
         {
-            @class = "form-control"
-        })
-    </div>
-
-    <div class="form-group">
-        <label>Line 3:</label>
-        @Html.TextBoxFor(x => x.Line3, new
-        {
-            @class = "form-control"
-        })
-    </div>
-
-    <div class="form-group">
-        <label>City:</label>
-        @Html.TextBoxFor(x => x.City, new
-        {
-            @class = "form-control"
-        })
-    </div>
-
-    <div class="form-group">
-        <label>State:</label>
-        @Html.TextBoxFor(x => x.State, new
-        {
-            @class = "form-control"
-        })
-    </div>
-
-    <div class="form-group">
-        <label>Zip:</label>
-        @Html.TextBoxFor(x => x.Zip, new
-        {
-            @class = "form-control"
-        })
-    </div>
-
-    <div class="form-group">
-        <label>Country:</label>
-        @Html.TextBoxFor(x => x.Country, new
-        {
-            @class = "form-control"
-        })
-    </div>
+            <div class="form-group">
+                <label>@(property.DisplayName ?? property.PropertyName)</label>
+                @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
+            </div>
+        }
+    }
 
     <h3>Options</h3>
     <div class="checkbox">
         <label>
-            @Html.CheckBox("IsActive", Model.GiftWrap == "Y" ? true : false)
+            @Html.CheckBoxFor(x => x.GiftWrap)
             Gift wrap these items
         </label>
     </div>
@@ -91,4 +47,3 @@
         <input class="btn btn-primary" type="submit" value="Complete order" />
     </div>
 }
-

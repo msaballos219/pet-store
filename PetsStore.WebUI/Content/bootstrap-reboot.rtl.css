@@ -1,10 +1,19 @@
 /*!
+<<<<<<< HEAD
  * Bootstrap Reboot v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root,
 [data-bs-theme=light] {
+=======
+ * Bootstrap Reboot v5.2.3 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+:root {
+>>>>>>> 28dd340d78804c93f244d969016324d7ab4f7cf2
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -44,6 +53,7 @@
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
+<<<<<<< HEAD
   --bs-primary-text-emphasis: #052c65;
   --bs-secondary-text-emphasis: #2b2f32;
   --bs-success-text-emphasis: #0a3622;
@@ -70,6 +80,12 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
+=======
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-bg-rgb: 255, 255, 255;
+>>>>>>> 28dd340d78804c93f244d969016324d7ab4f7cf2
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -78,6 +94,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
+<<<<<<< HEAD
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg: #fff;
   --bs-body-bg-rgb: 255, 255, 255;
@@ -100,6 +117,9 @@
   --bs-code-color: #d63384;
   --bs-highlight-color: #212529;
   --bs-highlight-bg: #fff3cd;
+=======
+  --bs-body-bg: #fff;
+>>>>>>> 28dd340d78804c93f244d969016324d7ab4f7cf2
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -108,6 +128,7 @@
   --bs-border-radius-sm: 0.25rem;
   --bs-border-radius-lg: 0.5rem;
   --bs-border-radius-xl: 1rem;
+<<<<<<< HEAD
   --bs-border-radius-xxl: 2rem;
   --bs-border-radius-2xl: var(--bs-border-radius-xxl);
   --bs-border-radius-pill: 50rem;
@@ -178,6 +199,14 @@
   --bs-form-valid-border-color: #75b798;
   --bs-form-invalid-color: #ea868f;
   --bs-form-invalid-border-color: #ea868f;
+=======
+  --bs-border-radius-2xl: 2rem;
+  --bs-border-radius-pill: 50rem;
+  --bs-link-color: #0d6efd;
+  --bs-link-hover-color: #0a58ca;
+  --bs-code-color: #d63384;
+  --bs-highlight-bg: #fff3cd;
+>>>>>>> 28dd340d78804c93f244d969016324d7ab4f7cf2
 }
 
 *,
@@ -209,7 +238,11 @@ hr {
   margin: 1rem 0;
   color: inherit;
   border: 0;
+<<<<<<< HEAD
   border-top: var(--bs-border-width) solid;
+=======
+  border-top: 1px solid;
+>>>>>>> 28dd340d78804c93f244d969016324d7ab4f7cf2
   opacity: 0.25;
 }
 
@@ -218,7 +251,10 @@ h6, h5, h4, h3, h2, h1 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+<<<<<<< HEAD
   color: var(--bs-heading-color);
+=======
+>>>>>>> 28dd340d78804c93f244d969016324d7ab4f7cf2
 }
 
 h1 {
@@ -327,7 +363,10 @@ small {
 
 mark {
   padding: 0.1875em;
+<<<<<<< HEAD
   color: var(--bs-highlight-color);
+=======
+>>>>>>> 28dd340d78804c93f244d969016324d7ab4f7cf2
   background-color: var(--bs-highlight-bg);
 }
 
@@ -348,11 +387,19 @@ sup {
 }
 
 a {
+<<<<<<< HEAD
   color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
   text-decoration: underline;
 }
 a:hover {
   --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+=======
+  color: var(--bs-link-color);
+  text-decoration: underline;
+}
+a:hover {
+  color: var(--bs-link-hover-color);
+>>>>>>> 28dd340d78804c93f244d969016324d7ab4f7cf2
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -419,7 +466,11 @@ table {
 caption {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+<<<<<<< HEAD
   color: var(--bs-secondary-color);
+=======
+  color: #6c757d;
+>>>>>>> 28dd340d78804c93f244d969016324d7ab4f7cf2
   text-align: right;
 }
 
@@ -543,8 +594,13 @@ legend + * {
 }
 
 [type=search] {
+<<<<<<< HEAD
   -webkit-appearance: textfield;
   outline-offset: -2px;
+=======
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+>>>>>>> 28dd340d78804c93f244d969016324d7ab4f7cf2
 }
 
 [type="tel"],

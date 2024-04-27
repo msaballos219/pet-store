@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PetsStore.Domain.Abstract;
+using PetsStore.Domain.Entities;
 using PetsStore.WebUI.Models;
 
 namespace PetsStore.WebUI.Controllers
@@ -17,7 +18,7 @@ namespace PetsStore.WebUI.Controllers
         {
             this.myRepository = proRepository;
         }
-        // GET: Product
+        
         public int PageSize = 4;
         public ViewResult List(string category, int page = 1)
         {
@@ -41,9 +42,18 @@ namespace PetsStore.WebUI.Controllers
             };
             return View(model);
         }
-        /*return View(myRepository.Products.OrderBy(p => p.ProductID).Skip((page-1) * PageSize).Take(PageSize));*/
+        public FileContentResult GetImage(int productID)
+        {
+            Product prod = myRepository.Products.FirstOrDefault(p => p.ProductID == productID);
 
-
-
+            if(prod != null)
+            {
+                return File(prod.ImageData, prod.ImageMimeType);
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

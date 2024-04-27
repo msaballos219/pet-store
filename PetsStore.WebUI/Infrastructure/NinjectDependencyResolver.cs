@@ -5,7 +5,11 @@ using System;
 using System.Web.Mvc;
 using System.Collections.Generic;
 using PetsStore.Domain.Abstract;
+using PetsStore.Domain.Entities;
 using PetsStore.Domain.Concrete;
+using System.Configuration;
+using PetsStore.WebUI.Infrastructure.Abstract;
+using PetsStore.WebUI.Infrastructure.Concrete;
 
 namespace PetsStore.WebUI.Infrastructure
 {
@@ -31,14 +35,18 @@ namespace PetsStore.WebUI.Infrastructure
 
         private void AddBindings()
         {
-            /*Mock<IProductRepository> myMock = new Mock<IProductRepository>();
-
-            myMock.Setup(m => m.Products).Returns(new List<Product> {
-                 new Product { Name = "Bird Seed", Price = 25},
-                 new Product { Name = "Chew Toy", Price = 179},
-                 new Product { Name = "Training Treats", Price = 95},
-                 });*/
             mykernel.Bind<IProductRepository>().To<EFProductRepository>();
+
+            EmailSettings emailSettings = new EmailSettings
+            {
+                WriteAsFile = bool.Parse(ConfigurationManager.AppSettings["Email.WriteAsFile"] ?? "false")
+            };
+
+            mykernel.Bind<IOrderProcessor>()
+                    .To<EmailOrderProcessor>()
+                    .WithConstructorArgument("settings", emailSettings);
+
+            mykernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
         }
     }
 }

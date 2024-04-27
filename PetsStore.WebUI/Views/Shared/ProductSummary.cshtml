@@ -1,6 +1,13 @@
 ﻿@model PetsStore.Domain.Entities.Product
 
 <div class="card card-body bg-light mt-3">
+
+    @if(Model.ImageData != null)
+    {
+        <div class="float-start" style="margin-right: 10px;">
+            <img class="img-thumbnail" width="75" height="75" src="@Url.Action("GetImage", "Product", new {Model.ProductID})" />
+        </div>
+    }
     <h3>
         <strong>@Model.Name</strong>
 
@@ -8,7 +15,7 @@
             @Model.Price.ToString("c")
         </span>
     </h3>
-    @using (Html.BeginForm("AddToCart", "Cart"))
+    @using(Html.BeginForm("AddToCart", "Cart"))
     {
         <div class="float-end">
             @Html.HiddenFor(x => x.ProductID)

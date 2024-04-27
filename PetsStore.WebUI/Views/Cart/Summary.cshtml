@@ -9,7 +9,7 @@
         @class = "btn btn-primary navbar-btn"
     })
 </div>
-<div class="navbar-text navbar-right">
+<div class="navbar-text navbar-right text-dark">
     <b>Your Cart: </b>
     @Model.Lines.Sum(x => x.Quantity) item(s),
     @Model.ComputeTotalValue().ToString("c")
